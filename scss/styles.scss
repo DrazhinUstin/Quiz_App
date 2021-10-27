@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+@import 'config';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient($primary-1, $primary-2);
+    color: $black;
+    line-height: 1;
+}
+
+.wrapper {
+    @include absolute-position(50%, 50%, translate(-50%, -50%));
+    max-width: 500px;
+    width: 90vw;
+    border-radius: $radius;
+    overflow: hidden;
+    background-color: $white;
+    box-shadow: $shadow;
+    transition: $transition-2;
+}
+
+.title {
+    padding: 1rem;
+    background-color: $primary-3;
+    color: $white;
+    h2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: $space;
+    }
+    h3 {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        letter-spacing: $space;
+    }
+}
+
+.btn {
+    height: 2.5rem;
+    padding: 0 1rem;
+    border: none;
+    border-radius: $radius;
+    background-color: $primary-3;
+    color: $white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: $space;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        background-color: $primary-4;
+    }
+}
+
+@import 'intro';
+@import 'quiz';

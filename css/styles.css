@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap");
+.quiz-heading, .quiz-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b1dff3), to(#6db1cf));
+  background: linear-gradient(#b1dff3, #6db1cf);
+  color: #000;
+  line-height: 1;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 90vw;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+
+.title {
+  padding: 1rem;
+  background-color: #2292c3;
+  color: #fff;
+}
+
+.title h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.title h3 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+
+.btn {
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #2292c3;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  background-color: #11739c;
+}
+
+.intro.hide {
+  visibility: hidden;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+}
+
+.intro.hide ~ .quiz {
+  visibility: visible;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.form {
+  padding: 1rem;
+}
+
+.form-item {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+
+.options {
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+}
+
+.options:focus {
+  outline: none;
+  padding-left: calc(0.5rem - 1px);
+  border: 2px solid #2292c3;
+}
+
+.quiz {
+  visibility: hidden;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+}
+
+.quiz-body {
+  padding: 1rem;
+}
+
+.question {
+  line-height: 1.25;
+}
+
+.answers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  row-gap: 0.5rem;
+  margin: 1rem 0;
+  list-style-type: lower-latin;
+  list-style-position: inside;
+}
+
+.answers li {
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #c3e9f9;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.answers li:hover {
+  background-color: #2292c3;
+  color: #fff;
+}
+
+.answers li.correct {
+  background-color: #59e66b;
+}
+
+.answers li.incorrect {
+  background-color: #ff7b7b;
+}
+
+.answers.disabled {
+  pointer-events: none;
+}
+
+.progress-bar div {
+  width: 8rem;
+  height: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #2292c3;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.progress-bar .indicator {
+  width: 20%;
+  height: 100%;
+  display: block;
+  background-color: #2292c3;
+}
+
+.next {
+  height: 2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+button.disabled {
+  background-color: #ccc;
+  pointer-events: none;
+}

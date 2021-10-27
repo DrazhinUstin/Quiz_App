@@ -1,0 +1,40 @@
+.intro {
+    &.hide {
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    &.hide ~ .quiz {
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.form {
+    padding: 1rem;
+}
+
+.form-item {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    letter-spacing: $space;
+}
+
+.options {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 0.5rem;
+    border: 1px solid $grey;
+    border-radius: $radius;
+    background-color: $white;
+    color: $black;
+    font-size: 1rem;
+    &:focus {
+        outline: none;
+        padding-left: calc(0.5rem - 1px);
+        border: 2px solid $primary-3;
+    }
+}

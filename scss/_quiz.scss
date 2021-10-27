@@ -1,0 +1,76 @@
+.quiz {
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.quiz-heading {
+    @extend %flex-between;
+}
+
+.quiz-body {
+    padding: 1rem;
+}
+
+.question {
+    line-height: 1.25;
+}
+
+.answers {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 0.5rem;
+    margin: 1rem 0;
+    list-style-type: lower-latin;
+    list-style-position: inside;
+    li {
+        padding: 1rem 0.5rem;
+        border-radius: $radius;
+        background-color: $primary-5;
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            background-color: $primary-3;
+            color: $white;
+        }
+        &.correct {
+            background-color: $green;
+        }
+        &.incorrect {
+            background-color: $red;
+        }
+    }
+    &.disabled {
+        pointer-events: none;
+    }
+}
+
+.quiz-footer {
+    @extend %flex-between;
+}
+
+.progress-bar {
+    div {
+        width: 8rem;
+        height: 1rem;
+        margin-top: 0.5rem;
+        border: 1px solid $primary-3;
+        border-radius: $radius;
+        overflow: hidden;
+    }
+    .indicator {
+        width: 20%;
+        height: 100%;
+        display: block;
+        background-color: $primary-3;
+    }
+}
+
+.next {
+    height: 2rem;
+    align-self: flex-end;
+}
+
+button.disabled {
+    background-color: $grey;
+    pointer-events: none;
+}

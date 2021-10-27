@@ -1,0 +1,33 @@
+$primary-1: #b1dff3;
+$primary-2: #6db1cf;
+$primary-3: #2292c3;
+$primary-4: #11739c;
+$primary-5: #c3e9f9;
+$grey: #ccc;
+$green: rgb(89, 230, 107);
+$red: rgb(255, 123, 123);
+$white: #fff;
+$black: #000;
+$radius: 0.5rem;
+$space: 0.1rem;
+$shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+$transition: all 0.4s ease;
+$transition-2: all 0.6s linear;
+
+%grid-center {
+    display: grid;
+    place-items: center;
+}
+
+%flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin absolute-position ($top, $left, $translate) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: $translate;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <script src="https://kit.fontawesome.com/88b18bb1d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="intro wrapper">
+        <div class="title">
+            <h2>Quiz app</h2>
+        </div>
+        <form class="form">
+            <div class="form-item">
+                <h4 class="form-label">Category:</h4>
+                <select class="options" id="category">
+                    <option value="9" selected>General Knowledge</option>
+                    <option value="10">Entertainment: Books</option>
+                    <option value="11">Entertainment: Film</option>
+                    <option value="12">Entertainment: Music</option>
+                    <option value="13">Entertainment: Musicals & Theatres</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <h4 class="form-label">Difficulty:</h4>
+                <select class="options" id="difficulty">
+                    <option value="easy" selected>Ease</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <h4 class="form-label">Questions amount:</h4>
+                <select class="options" id="questions-amount">
+                    <option value="5" selected>5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <button type="submit" class="submit btn">Start quiz</button>
+        </form>
+    </div>
+    <div class="quiz wrapper">
+        <div class="title">
+            <div class="quiz-heading">
+                <h3>General Knowledge</h3>
+                <h4>ease</h4>
+            </div>
+        </div>
+        <div class="quiz-body">
+            <h4 class="question">Foie gras is a French delicacy typically made from what part of a duck or goose?</h4>
+            <ul class="answers">
+                <li>Liver</li>
+                <li>Heart</li>
+                <li>Stomach</li>
+                <li>Intestines</li>
+            </ul>
+            <div class="quiz-footer">
+                <div class="progress-bar">
+                    <h4>Question <span class="question-number">1</span> of <span class="questions-amount">5</span></h4>
+                    <div><span class="indicator"></span></div>
+                </div>
+                <button class="next btn disabled">Next</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
