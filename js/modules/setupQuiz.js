@@ -11,9 +11,9 @@ const setupQuiz = (quiz) => {
     const questionNumberDOM = getElement('.question-number');
     const questionsAmountDOM = getElement('.questions-amount');
     const indicatorDOM = getElement('.indicator');
-    const nextBtn = getElement('.next.btn');
-    const restartBtn = getElement('.restart.btn');
-    const exitBtn = getElement('.exit.btn');
+    const nextBtn = getElement('.next-btn');
+    const restartBtn = getElement('.restart-btn');
+    const exitBtn = getElement('.exit-btn');
     let quizStep = 0;
     let correctAnswersScore = 0;
     let correctAnswerIndex;
@@ -38,7 +38,7 @@ const setupQuiz = (quiz) => {
 
     const displayResults = () => {
         const timeResult = convertMilliseconds(quizEndTime - quizStartTime);
-        const successRate = correctAnswersScore/quiz.length * 100;
+        const successRate = Math.round(correctAnswersScore/quiz.length * 100);
         getElement('.result-category').textContent = categoryDOM.textContent;
         getElement('.result-difficulty').textContent = difficultyDOM.textContent;
         getElement('.total-questions').textContent = quiz.length;

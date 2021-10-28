@@ -50,11 +50,11 @@
 
 .progress-bar {
     div {
-        width: 8rem;
-        height: 1rem;
+        width: 9rem;
+        height: 1.2rem;
         margin-top: 0.5rem;
         border: 1px solid $primary-3;
-        border-radius: $radius;
+        border-radius: $radius-2;
         overflow: hidden;
     }
     .indicator {
@@ -66,12 +66,7 @@
     }
 }
 
-.next.btn {
+.next-btn {
     height: 2rem;
     align-self: flex-end;
-}
-
-button.disabled {
-    background-color: $grey;
-    pointer-events: none;
 }

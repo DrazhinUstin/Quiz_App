@@ -29,4 +29,8 @@ const convertMilliseconds = (ms) => {
     return seconds == 60 ? `${minutes + 1} : 00` : `${minutes} : ${seconds < 10 ? '0' + seconds : seconds}`; 
 };
 
-export {fetchData, getElement, shuffleArray, convertMilliseconds};
+const hidePreloader = () => {
+    setTimeout(() => getElement('.preloader').classList.add('hide'), 500);
+};
+
+export {fetchData, getElement, shuffleArray, convertMilliseconds, hidePreloader};

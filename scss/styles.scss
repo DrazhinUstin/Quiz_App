@@ -65,8 +65,13 @@ body {
     &:hover {
         background-color: $primary-4;
     }
+    &.disabled {
+        background-color: $grey;
+        pointer-events: none;
+    }
 }
 
+@import 'preloader';
 @import 'intro';
 @import 'quiz';
 @import 'result';

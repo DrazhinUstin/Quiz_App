@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap");
+.preloader {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
 .footer, .quiz-heading, .result-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,6 +89,63 @@ body {
 
 .btn:hover {
   background-color: #11739c;
+}
+
+.btn.disabled {
+  background-color: #ccc;
+  pointer-events: none;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: unset;
+          transform: unset;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 99;
+}
+
+.preloader.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.preloader span {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  border: 0.4rem solid #fff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: loading 0.5s linear 0s infinite;
+          animation: loading 0.5s linear 0s infinite;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .intro.hide {
@@ -181,11 +244,11 @@ body {
 }
 
 .progress-bar div {
-  width: 8rem;
-  height: 1rem;
+  width: 9rem;
+  height: 1.2rem;
   margin-top: 0.5rem;
   border: 1px solid #2292c3;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   overflow: hidden;
 }
 
@@ -198,15 +261,10 @@ body {
   transition: all 0.4s ease;
 }
 
-.next.btn {
+.next-btn {
   height: 2rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
-}
-
-button.disabled {
-  background-color: #ccc;
-  pointer-events: none;
 }
 
 .result {
@@ -230,10 +288,10 @@ button.disabled {
   color: #11739c;
 }
 
-.exit.btn {
+.exit-btn {
   background-color: #f14c4c;
 }
 
-.exit.btn:hover {
+.exit-btn:hover {
   background-color: #e41414;
 }
