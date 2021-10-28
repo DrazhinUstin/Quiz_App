@@ -1,14 +1,18 @@
 .quiz {
     visibility: hidden;
     transform: translate(-50%, -50%) scale(0);
+    &.show {
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    &.show-result ~ .result {
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 .quiz-heading {
     @extend %flex-between;
-}
-
-.quiz-body {
-    padding: 1rem;
 }
 
 .question {
@@ -22,6 +26,9 @@
     margin: 1rem 0;
     list-style-type: lower-latin;
     list-style-position: inside;
+    &.disabled {
+        pointer-events: none;
+    }
     li {
         padding: 1rem 0.5rem;
         border-radius: $radius;
@@ -36,16 +43,9 @@
             background-color: $green;
         }
         &.incorrect {
-            background-color: $red;
+            background-color: $red-1;
         }
     }
-    &.disabled {
-        pointer-events: none;
-    }
-}
-
-.quiz-footer {
-    @extend %flex-between;
 }
 
 .progress-bar {
@@ -58,14 +58,15 @@
         overflow: hidden;
     }
     .indicator {
-        width: 20%;
+        width: 0;
         height: 100%;
         display: block;
         background-color: $primary-3;
+        transition: $transition;
     }
 }
 
-.next {
+.next.btn {
     height: 2rem;
     align-self: flex-end;
 }

@@ -3,14 +3,6 @@
         visibility: hidden;
         transform: translate(-50%, -50%) scale(0);
     }
-    &.hide ~ .quiz {
-        visibility: visible;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-.form {
-    padding: 1rem;
 }
 
 .form-item {

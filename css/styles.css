@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap");
-.quiz-heading, .quiz-footer {
+.footer, .quiz-heading, .result-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,22 +45,25 @@ body {
   transition: all 0.6s linear;
 }
 
-.title {
+.header {
   padding: 1rem;
   background-color: #2292c3;
   color: #fff;
 }
 
-.title h2 {
+.header h2 {
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 
-.title h3 {
+.header h3 {
   font-size: 1.2rem;
   text-transform: capitalize;
-  letter-spacing: 0.1rem;
+}
+
+.body {
+  padding: 1rem;
 }
 
 .btn {
@@ -86,16 +89,6 @@ body {
   visibility: hidden;
   -webkit-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
-}
-
-.intro.hide ~ .quiz {
-  visibility: visible;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-}
-
-.form {
-  padding: 1rem;
 }
 
 .form-item {
@@ -131,8 +124,16 @@ body {
           transform: translate(-50%, -50%) scale(0);
 }
 
-.quiz-body {
-  padding: 1rem;
+.quiz.show {
+  visibility: visible;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.quiz.show-result ~ .result {
+  visibility: visible;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
 }
 
 .question {
@@ -151,6 +152,10 @@ body {
   margin: 1rem 0;
   list-style-type: lower-latin;
   list-style-position: inside;
+}
+
+.answers.disabled {
+  pointer-events: none;
 }
 
 .answers li {
@@ -175,10 +180,6 @@ body {
   background-color: #ff7b7b;
 }
 
-.answers.disabled {
-  pointer-events: none;
-}
-
 .progress-bar div {
   width: 8rem;
   height: 1rem;
@@ -189,13 +190,15 @@ body {
 }
 
 .progress-bar .indicator {
-  width: 20%;
+  width: 0;
   height: 100%;
   display: block;
   background-color: #2292c3;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-.next {
+.next.btn {
   height: 2rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -204,4 +207,33 @@ body {
 button.disabled {
   background-color: #ccc;
   pointer-events: none;
+}
+
+.result {
+  visibility: hidden;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+}
+
+.result-item {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.result-item h4 {
+  text-transform: capitalize;
+}
+
+.success-rate i {
+  margin-right: 0.4rem;
+  color: #11739c;
+}
+
+.exit.btn {
+  background-color: #f14c4c;
+}
+
+.exit.btn:hover {
+  background-color: #e41414;
 }

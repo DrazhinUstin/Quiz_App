@@ -27,7 +27,7 @@ body {
     transition: $transition-2;
 }
 
-.title {
+.header {
     padding: 1rem;
     background-color: $primary-3;
     color: $white;
@@ -39,8 +39,15 @@ body {
     h3 {
         font-size: 1.2rem;
         text-transform: capitalize;
-        letter-spacing: $space;
     }
+}
+
+.body {
+    padding: 1rem;
+}
+
+.footer {
+    @extend %flex-between;
 }
 
 .btn {
@@ -62,3 +69,4 @@ body {
 
 @import 'intro';
 @import 'quiz';
+@import 'result';

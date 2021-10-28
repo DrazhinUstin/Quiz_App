@@ -1,0 +1,28 @@
+.result {
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.result-item {
+    @extend %flex-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $grey;
+    h4 {
+        text-transform: capitalize;
+    }
+}
+
+.success-rate {
+    i {
+        margin-right: 0.4rem;
+        color: $primary-4;
+    }
+}
+
+.exit.btn {
+    background-color: $red-2;
+    &:hover {
+        background-color: $red-3;
+    }
+}
