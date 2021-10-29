@@ -11,10 +11,6 @@
     }
 }
 
-.quiz-heading {
-    @extend %flex-between;
-}
-
 .question {
     line-height: 1.25;
 }
@@ -50,12 +46,12 @@
 
 .progress-bar {
     div {
-        width: 9rem;
+        width: 8.5rem;
         height: 1.2rem;
         margin-top: 0.5rem;
-        border: 1px solid $primary-3;
         border-radius: $radius-2;
         overflow: hidden;
+        background-color: $grey-2;
     }
     .indicator {
         width: 0;

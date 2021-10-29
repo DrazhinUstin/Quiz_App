@@ -5,7 +5,7 @@
   place-items: center;
 }
 
-.footer, .quiz-heading, .result-item {
+.space-between, .result-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,6 +25,16 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+*::-moz-selection {
+  background-color: #11739c;
+  color: #fff;
+}
+
+*::selection {
+  background-color: #11739c;
+  color: #fff;
 }
 
 body {
@@ -271,12 +281,12 @@ body {
 }
 
 .progress-bar div {
-  width: 9rem;
+  width: 8.5rem;
   height: 1.2rem;
   margin-top: 0.5rem;
-  border: 1px solid #2292c3;
   border-radius: 0.7rem;
   overflow: hidden;
+  background-color: #dfe6e9;
 }
 
 .progress-bar .indicator {

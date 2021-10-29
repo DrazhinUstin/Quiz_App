@@ -6,6 +6,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Zen Kaku Gothic New', sans-serif;
+    &::selection {
+        background-color: $primary-4;
+        color: $white;
+    }
 }
 
 body {
@@ -49,7 +53,7 @@ body {
     padding: 1rem;
 }
 
-.footer {
+.space-between {
     @extend %flex-between;
 }
 
@@ -69,7 +73,7 @@ body {
         background-color: $primary-4;
     }
     &.disabled {
-        background-color: $grey;
+        background-color: $grey-1;
         pointer-events: none;
     }
 }
