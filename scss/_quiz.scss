@@ -70,3 +70,12 @@
     height: 2rem;
     align-self: flex-end;
 }
+
+@media screen and (max-width: 350px) {
+    .progress-bar {
+        div {
+            width: 7.5rem;
+            height: 1rem;
+        }
+    }
+}

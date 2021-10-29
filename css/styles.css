@@ -15,6 +15,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
 }
 
 * {
@@ -41,18 +43,24 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: 500px;
+  max-height: 95vh;
   width: 90vw;
   border-radius: 0.5rem;
-  overflow: hidden;
+  overflow: auto;
   background-color: #fff;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   -webkit-transition: all 0.6s linear;
   transition: all 0.6s linear;
+  -webkit-transition-property: visibility, -webkit-transform;
+  transition-property: visibility, -webkit-transform;
+  transition-property: transform, visibility;
+  transition-property: transform, visibility, -webkit-transform;
 }
 
 .header {
   padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
   background-color: #2292c3;
   color: #fff;
 }
@@ -73,7 +81,7 @@ body {
 }
 
 .btn {
-  height: 2.5rem;
+  height: 2.25rem;
   padding: 0 1rem;
   border: none;
   border-radius: 0.5rem;
@@ -94,6 +102,21 @@ body {
 .btn.disabled {
   background-color: #ccc;
   pointer-events: none;
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    width: 95vw;
+  }
+  .header h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .preloader {
@@ -179,6 +202,10 @@ body {
   outline: none;
   padding-left: calc(0.5rem - 1px);
   border: 2px solid #2292c3;
+}
+
+.submit-btn {
+  height: 2.5rem;
 }
 
 .quiz {
@@ -267,6 +294,13 @@ body {
       align-self: flex-end;
 }
 
+@media screen and (max-width: 350px) {
+  .progress-bar div {
+    width: 7.5rem;
+    height: 1rem;
+  }
+}
+
 .result {
   visibility: hidden;
   -webkit-transform: translate(-50%, -50%) scale(0);
@@ -281,6 +315,10 @@ body {
 
 .result-item h4 {
   text-transform: capitalize;
+}
+
+.result-item div {
+  text-align: right;
 }
 
 .success-rate i {

@@ -26,6 +26,7 @@ $transition-2: all 0.6s linear;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 0.5rem;
 }
 
 @mixin absolute-position ($top, $left, $translate) {

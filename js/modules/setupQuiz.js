@@ -63,7 +63,7 @@ const setupQuiz = (quiz) => {
         nextBtn.classList.remove('disabled');
         answersDOM.classList.add('disabled');
         if (quizStep === quiz.length - 1) {
-            nextBtn.textContent = 'see results';
+            nextBtn.textContent = 'see result';
             quizEndTime = Date.now();
         }
     });

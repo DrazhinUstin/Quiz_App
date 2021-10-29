@@ -19,16 +19,19 @@ body {
 .wrapper {
     @include absolute-position(50%, 50%, translate(-50%, -50%));
     max-width: 500px;
+    max-height: 95vh;
     width: 90vw;
     border-radius: $radius;
-    overflow: hidden;
+    overflow: auto;
     background-color: $white;
     box-shadow: $shadow;
     transition: $transition-2;
+    transition-property: transform, visibility;
 }
 
 .header {
     padding: 1rem;
+    border-radius: $radius $radius 0 0;
     background-color: $primary-3;
     color: $white;
     h2 {
@@ -51,7 +54,7 @@ body {
 }
 
 .btn {
-    height: 2.5rem;
+    height: 2.25rem;
     padding: 0 1rem;
     border: none;
     border-radius: $radius;
@@ -68,6 +71,25 @@ body {
     &.disabled {
         background-color: $grey;
         pointer-events: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper {
+        width: 95vw;
+    }
+    .header {
+        h3 {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .header {
+        h2 {
+            font-size: 1.8rem;
+        }
     }
 }
 
